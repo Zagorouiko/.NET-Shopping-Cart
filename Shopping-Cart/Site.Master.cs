@@ -7,6 +7,8 @@ using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Microsoft.AspNet.Identity;
+using System.Linq;
+using Shopping_Cart.Models;
 
 namespace Shopping_Cart
 {
@@ -70,6 +72,13 @@ namespace Shopping_Cart
         protected void Page_Load(object sender, EventArgs e)
         {
 
+        }
+
+        public IQueryable<Category> GetCategories()
+        {
+            var _db = new Shopping_Cart.Models.ProductContext();
+            IQueryable<Category> query = _db.Categories;
+            return query;
         }
 
         protected void Unnamed_LoggingOut(object sender, LoginCancelEventArgs e)
