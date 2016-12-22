@@ -5,7 +5,6 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using Shopping_Cart.Models;
 using System.Web.ModelBinding;
 
 namespace Shopping_Cart
@@ -19,7 +18,7 @@ namespace Shopping_Cart
 
         public IQueryable<Product> GetProducts([QueryString("id")] int? categoryId)
         {
-            var _db = new Shopping_Cart.Models.ProductContext();
+            var _db = new ProductContext();
             IQueryable<Product> query = _db.Products;
             if (categoryId.HasValue && categoryId > 0)
             {
