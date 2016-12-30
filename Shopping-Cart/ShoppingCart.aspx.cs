@@ -31,6 +31,7 @@ namespace Shopping_Cart
                     lblTotal.Text = "";
                     ShoppingCartTitle.InnerText = "Shopping Cart is Empty";
                     UpdateBtn.Visible = false;
+                    CheckoutImageBtn.Visible = false;
                 }
             }
 
