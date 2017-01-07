@@ -61,8 +61,8 @@ namespace Shopping_Cart
 
             app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             {
-                ClientId = "626551480996-bb3rh4ca9l945eqi72h4qhsvi5r2qfh4.apps.googleusercontent.com",
-                ClientSecret = "86MH52npvzNpUDGaf4lfGrEz"
+                ClientId = "626551480996-fgltpbpubklak3dt7u2ecuc7ck6gog0a.apps.googleusercontent.com",
+                ClientSecret = "0IhZ8yWg3EmBwh4otk9OCcZx"
             });
         }
     }
