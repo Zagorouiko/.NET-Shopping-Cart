@@ -11,6 +11,7 @@ using Shopping_Cart;
 using Shopping_Cart.Models;
 using System.Collections.Generic;
 using System.Linq;
+using Shopping_Cart.Logic;
 
 public class NVPAPICaller
 {
@@ -196,9 +197,11 @@ public class NVPAPICaller
                 myWriter.Write(strPost);
             }
         }
-        catch (Exception)
+        catch (Exception e)
         {
             // No logging for this tutorial.
+            // Log the exception.
+            ExceptionUtility.LogException(e, "HttpCall in PayPalFunction.cs");
         }
 
         //Retrieve the Response returned from the NVP API call to PayPal.
