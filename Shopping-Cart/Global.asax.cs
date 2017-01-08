@@ -8,6 +8,7 @@ using System.Web.Security;
 using System.Web.SessionState;
 using System.Data.Entity;
 using Shopping_Cart.Models;
+using Shopping_Cart.Logic;
 
 namespace Shopping_Cart
 {
@@ -21,6 +22,10 @@ namespace Shopping_Cart
 
             // Initialize the product database.
             Database.SetInitializer(new ProductDatabaseInitializer());
+
+            // Create the custom role and user.
+            RoleActions roleActions = new RoleActions();
+            roleActions.AddUserAndRole();
         }
     }
 }
