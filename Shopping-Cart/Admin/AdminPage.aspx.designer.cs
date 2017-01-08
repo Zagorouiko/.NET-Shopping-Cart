@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WingtipToys.Admin {
+namespace Shopping_Cart.Admin {
     
     
     public partial class AdminPage {

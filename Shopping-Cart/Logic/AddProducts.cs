@@ -26,5 +26,11 @@ namespace Shopping_Cart.Logic
             // Success.
             return true;
         }
+        public IQueryable GetCategories()
+        {
+            var _db = new ProductContext();
+            IQueryable query = _db.Categories;
+            return query;
+        }
     }
 }
